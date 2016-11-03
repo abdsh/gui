@@ -6,14 +6,14 @@ class HelloWorld(QDialog):
     def __init__(self):
         QDialog.__init__(self)
 
-        layout = QVBoxLayout()
+        layout = QGridLayout()
         self.lable = QLabel('Hello World :)')
         line_edit = QLineEdit()
         button = QPushButton("close")
 
-        layout.addWidget(self.lable)
-        layout.addWidget(line_edit)
-        layout.addWidget(button)
+        layout.addWidget(self.lable, 0, 0)
+        layout.addWidget(line_edit, 0, 1)
+        layout.addWidget(button, 1, 2)
 
         self.setLayout(layout)
 
