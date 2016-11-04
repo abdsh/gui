@@ -12,6 +12,10 @@ class Downloader(QDialog):
         progress = QProgressBar()
         download = QPushButton("Download")
 
+        url.setPlaceholderText('URL')
+        save_location.setPlaceholderText('File save location')
+
+        progress.setValue()
         layout.addWidget(url)
         layout.addWidget(save_location)
         layout.addWidget(progress)
@@ -19,6 +23,9 @@ class Downloader(QDialog):
 
 
         self.setLayout(layout)
+
+        self.setWindowTitle('pyDownloader')
+        self.setFocus() #set focus on entire app
 
 
 
